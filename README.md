@@ -1,12 +1,59 @@
-# React + Vite
+# Online Library System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional **React + Redux** web application that simulates an online library where users can browse, search, and view detailed information about books. 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+### Navigation & Routing
+- Built with **React Router v6.4+** using `createBrowserRouter` and `Outlet`
+- Includes routes for:
+  - `/` — Home page
+  - `/books` — Browse Books
+  - `/book/:id` — Book Details
+  - `/add` — Add a new book
+  - `/error` — 404 Not Found
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Browse & Search Books
+- Books are fetched from Redux state
+- Real-time **search filtering** by title or author
+- Displays each book as a styled card with:
+  - Cover image
+  - Title, author, and description
+  - Star-based rating display
+
+### Book Details Page
+- Each book links to a `/book/:id` page with:
+  - Larger cover display
+  - Clean, detailed layout
+  - Back navigation
+
+### Add New Books
+- Simple form to add books to the global Redux store
+- Validates input fields
+- Adds newly created books to the browse list
+
+### State Management
+- Global state managed using **Redux Toolkit**
+- Books are stored and accessed from the Redux store
+- Components subscribe via `useSelector` and dispatch actions to update state
+
+### Styling
+- Custom CSS using `styles.css`
+- Responsive layouts and hover effects
+- Clean and minimal UI with emphasis on readability
+
+---
+
+# Installation
+## Clone the Repository
+- https://github.com/ManvithGatty/Online-Library-Application.git
+- cd Online-Library-Application
+
+## Install Dependencies
+- npm install
+
+## Start the Development Server
+- npm run dev
+
